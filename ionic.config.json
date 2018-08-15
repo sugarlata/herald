@@ -1,0 +1,8 @@
+{
+  "name": "herald",
+  "app_id": "f0cf4904",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
