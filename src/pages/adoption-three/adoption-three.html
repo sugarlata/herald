@@ -1,0 +1,55 @@
+<ion-header padding>
+  <!-- <div class="spacer-div"></div> -->
+  <adoption-ani-three #gospelAni></adoption-ani-three>
+  <!-- <div class="spacer-div"></div> -->
+</ion-header>
+
+<ion-content padding>
+ <h1>Rescued</h1>
+  <div class="accordion">
+    <ul>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0">From the Bible</a>
+        <div class="acc-panel">
+          <p>
+            But now He has reconciled you by Christ's physical body through death to present you holy in His sight, without blemish and free from accusation.
+                     - Colossians 1:22
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabOneClick()">His Life</a>
+        <div class="acc-panel" (click)="tabOneUnclicked()">
+          <p>
+            Jesus is God who became human. Although He was God, He lived as a man, in a human body and He demonstrated a perfect life of love, truth, and power towrads others because of His close relationship with His Father.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabTwoClick()">His Sacrifice</a>
+        <div class="acc-panel" (click)="tabTwoUnclicked()">
+          <p>
+            Jesus demonstrated the full extent of God's love when He took on our sinful (independent/broken/human) nature in himself when He died for us. Three days later, the Father raised Him to life.             
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">His Victory</a>
+        <div class="acc-panel" (click)="tabThreeUnclicked()">
+          <p>
+            Jesus now lives with his Father forever, in victory over the devil, sin, guilt, shame, and death.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  
+  <ion-fab bottom left>
+    <button ion-button color="dark" round (click)="goBack()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-button class="fab-adoption" round (click)="goForward()"><ion-icon name="arrow-forward"></ion-icon></button>
+  </ion-fab>
+</ion-content>

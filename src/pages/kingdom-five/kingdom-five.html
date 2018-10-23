@@ -1,0 +1,64 @@
+<!--
+  Generated template for the KingdomFivePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+
+  <div class="accordion">
+    <ul>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0">From the Bible</a>
+        <div class="acc-panel">
+          <p>
+            Once you were alienated from God and were enemies in your minds.
+                     - Colossians 1:21
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabOneClick()">Our Past</a>
+        <div class="acc-panel" (click)="tabOneUnclicked()">
+          <p>
+            A deception long ago caused the first people to choose distrust of God their Father, trusting their own judgement instead.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabTwoClick()">Our Legacy</a>
+        <div class="acc-panel" (click)="tabTwoUnclicked()">
+          <p>
+            That choice (sin) made them orphans because it broke their perfect relationship with God.              
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">Our State</a>
+        <div class="acc-panel" (click)="tabThreeUnclicked()">
+          <p>
+            We inherited their mindset of being an orphan from God - not knowing what was possible. We show this by the choices we make.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">Our Search</a>
+        <div class="acc-panel" (click)="tabThreeUnclicked()">
+          <p>
+            As a result we search for self-worth, fulfillment, and security apart from God because we feel He is distant.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+  <ion-fab bottom left>
+    <button ion-button color="dark" round (click)="goBack()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-button color="dark" round (click)="goHome()"><ion-icon name="home"></ion-icon></button>
+  </ion-fab>
+</ion-content>

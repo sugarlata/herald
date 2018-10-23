@@ -1,0 +1,64 @@
+<ion-header padding>
+  <!-- <div class="spacer-div"></div> -->
+  <adoption-ani-four #gospelAni></adoption-ani-four>
+  <!-- <div class="spacer-div"></div> -->
+</ion-header>
+
+<ion-content padding>
+  <h1>Adopted</h1>
+  The Father is inviting you to trust Him and believe what He has done for you in Jesus.
+
+  <div class="accordion">
+    <ul>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0">From the Bible</a>
+        <div class="acc-panel">
+          <p>
+            For He has rescued us from the dominion of darkness and brought us into the Kingdom of the Son He loves, in whom we have redemption, the forgiveness of sins.
+                     - Colossians 1:13,14
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabOneClick()">My Gift</a>
+        <div class="acc-panel" (click)="tabOneUnclicked()">
+          <p>
+            He will forgive you and make you clean.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabTwoClick()">My Adoption</a>
+        <div class="acc-panel" (click)="tabTwoUnclicked()">
+          <p>
+            He will adopt you as His child so you will know Him and His love for you.              
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">My New Nature</a>
+        <div class="acc-panel" (click)="tabThreeUnclicked()">
+          <p>
+            He will make you a new creation with a righteous nature.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabFourClick()">My New Relationship</a>
+        <div class="acc-panel" (click)="tabFourUnclicked()">
+          <p>
+            The Father, Jesus, and Holy Spirit will come to you and make their home with you.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  
+  <ion-fab bottom left>
+    <button ion-button color="dark" round (click)="goBack()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-button class="fab-adoption" round (click)="goForward()"><ion-icon name="arrow-forward"></ion-icon></button>
+  </ion-fab>
+</ion-content>

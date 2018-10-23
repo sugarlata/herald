@@ -1,0 +1,62 @@
+<ion-header padding>
+    <!-- <div class="spacer-div"></div> -->
+    <adoption-ani-two #gospelAni></adoption-ani-two>
+    <!-- <div class="spacer-div"></div> -->
+</ion-header>
+
+<ion-content padding>
+  <h1>Orphaned</h1>
+  <div class="accordion">
+    <ul>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0">From the Bible</a>
+        <div class="acc-panel">
+          <p>
+            Once you were alienated from God and were enemies in your minds.
+                     - Colossians 1:21
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabOneClick()">Our Past</a>
+        <div class="acc-panel" (click)="tabOneUnclicked()">
+          <p>
+            A deception long ago caused the first people to choose distrust of God their Father, trusting their own judgement instead.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabTwoClick()">Our Legacy</a>
+        <div class="acc-panel" (click)="tabTwoUnclicked()">
+          <p>
+            That choice (sin) made them orphans because it broke their perfect relationship with God.              
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">Our State</a>
+        <div class="acc-panel" (click)="tabThreeUnclicked()">
+          <p>
+            We inherited their mindset of being an orphan from God - not knowing what was possible. We show this by the choices we make.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabFourClick()">Our Search</a>
+        <div class="acc-panel" (click)="tabFourUnclicked()">
+          <p>
+            As a result we search for self-worth, fulfillment, and security apart from God because we feel He is distant.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  
+  <ion-fab bottom left>
+    <button ion-button color="dark" round (click)="goBack()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-button class="fab-adoption" round (click)="goForward()"><ion-icon name="arrow-forward"></ion-icon></button>
+  </ion-fab>
+</ion-content>

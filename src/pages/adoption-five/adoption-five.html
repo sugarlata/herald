@@ -1,0 +1,70 @@
+<ion-header padding>
+  <!-- <div class="spacer-div"></div> -->
+  <adoption-ani-five #gospelAni></adoption-ani-five>
+  <!-- <div class="spacer-div"></div> -->
+</ion-header>
+
+<ion-content padding>
+&nbsp;
+<h1>Transformed</h1>
+
+&nbsp;
+<p style="color:#007c91">If you want to come back to the Father this is what you can do:</p>
+  <div class="accordion">
+    <ul>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabBClick()">From the Bible</a>
+        <div class="acc-panel" (click)="tabBUnclicked()">
+          <p>
+              We continually ask God to fill you with the knowledge of his will through all the wisdom and understanding that the Spirit gives, so that you may live a life worthy of the Lord and please him in every way: bearing fruit in every good work, growing in the knowledge of God, being strengthened with all power according to his glorious might so that you may have great endurance and patience, and giving joyful thanks to the Father, who has qualified you to share in the inheritance of his holy people in the kingdom of light.
+                     - Colossians 1:9-12
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabOneClick()">My Desire</a>
+        <div class="acc-panel" (click)="tabOneUnclicked()">
+          <p>
+            Ask His forgiveness for living your own way in prayer.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabTwoClick()">My Thanks</a>
+        <div class="acc-panel" (click)="tabTwoUnclicked()">
+          <p>
+            Thank Him for dying for you, removing your sin and making you new.             
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">My Commitment</a>
+        <div class="acc-panel" (click)="tabThreeUnclicked()">
+          <p>
+            Tell Jesus you trust in His goodness and love and will love and follow Him in everything. 
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="acc-handle" tabindex="0" (click)="tabFourClick()">My Acceptance</a>
+        <div class="acc-panel" (click)="tabFourUnclicked()">
+          <p>
+            Receive Him into your life.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <ion-fab bottom left>
+    <button ion-button color="dark" round (click)="goBack()"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-button color="dark" round (click)="goHome()"><ion-icon name="home"></ion-icon></button>
+  </ion-fab>
+  &nbsp;
+  <p style="color:#007c91">In Jesus you are included in God's family and become someone who can transform the earth with the same power, love and truth that was exemplified in Jesus.</p>
+  &ensp;
+  <br>
+  &ensp;
+</ion-content>
