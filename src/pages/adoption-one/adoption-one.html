@@ -1,53 +1,157 @@
-<ion-header padding>
-  <div class="spacer-div"></div>
-  <adoption-ani-one #gospelAni></adoption-ani-one>
-  <div class="spacer-div"></div>
-</ion-header>
+<div class="parallax-spacer"></div>
 
-<ion-content padding>
-  <h1>God's Family Testing 1</h1>
-    <div class="accordion">
-      <ul>
-        <li>
-          <a href="#" class="acc-handle" tabindex="0">From the Bible</a>
-          <div class="acc-panel">
-            <p>
-              The faith and love that spring from the hope stored up for you in Heaven and about which you have already heard in the true message of the Gospel.
-                       - Colossians 1:5
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" class="acc-handle" tabindex="0" (click)="tabOneClick()">His Character</a>
-          <div class="acc-panel" (click)="tabOneUnclicked()">
-            <p>
-              God (the creator) loves you because He is love and made you in His image and likeness. You have immense value!
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" class="acc-handle" tabindex="0" (click)="tabTwoClick()">His Relationship</a>
-          <div class="acc-panel" (click)="tabTwoUnclicked()">
-            <p>
-              He is a good father who made you to be His child.              
-            </p>
-          </div>
-        </li>
-        <li>
-          <a href="#" class="acc-handle" tabindex="0" (click)="tabThreeClick()">His Nature</a>
-          <div class="acc-panel" (click)="tabThreeUnclicked()">
-            <p>
-              He is God (Father, Jesus the son, and Holy Spirit), who live in a relationship of perfect love and made you to be included and share this with them.
-            </p>
-          </div>
-        </li>
-      </ul>
+<div class="parallax-div">
+
+    <adoption-animator #gospelAni></adoption-animator>
+
+</div>
+
+<ion-content #content padding class="parallax-scroller" (ionScroll)="onScroll($event)">
+
+  <div class="scrolling-opaque">
+
+    <div class="spacer"></div>
+
+    <div class="main-title">
+
+      <h1>God's Family</h1>
+  
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+    <div class="main-block">
+      
+      <blockquote>
+        The faith and love that spring from the hope stored up for you in Heaven and about which you have already heard in the true message of the Gospel.
+      </blockquote>
+      <p text-right>
+        - Colossians 1:5
+      </p>
+
+    </div>
+
+    <div class="spacer"></div>
+    
+    <div class="spacer"></div>
+    
+    <div class="spacer"></div>
+
+    <div #blinky class="blinky" text-center>
+        
+      <p class="scroll-text">
+        (Scroll)
+      </p>
+      <p class="icon-text">
+        ▼
+      </p>
     </div>
     
+    <div class="spacer"></div>
+    
+    <div class="spacer"></div>
+
+  </div>
+
+  <div class="scrolling-opaque">
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+    <div class="main-heading">
+
+      <h2 text-center>His Character</h2>
+  
+    </div>
+
+    <div class="main-block">
+      
+      <p text-center>
+          God (the creator) loves you because He is love and made you in His image and likeness. You have immense value!
+      </p>
+
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+  </div>
+
+  <div class="parallax-viewport"></div>
+  
+  <div class="scrolling-opaque">
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+    <div class="main-heading">
+
+      <h2 text-center>His Relationship</h2>
+  
+    </div>
+
+    <div class="main-block">
+      
+      <p text-center>
+          He is a good father who made you to be His child.
+      </p>
+
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+  </div>
+
+  <div class="parallax-viewport"></div>
+  
+  <div class="scrolling-opaque">
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+    <div class="main-heading">
+
+      <h2 text-center>His Nature</h2>
+  
+    </div>
+
+    <div class="main-block">
+      
+      <p text-center>
+          He is God (Father, Jesus the son, and Holy Spirit), who live in a relationship of perfect love and made you to be included and share this with them.
+      </p>
+
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="spacer"></div>
+
+  </div>
+
+  <div class="parallax-viewport"></div>
+  
+  <div class="main-block" text-center>
+  
+    <button ion-button class="fab-adoption" round (click)="goForward()">Next</button>
+  
+  </div>
+
+  <div class="final-spacer"></div>
+  
+</ion-content>
+
   <ion-fab bottom left>
     <button ion-button color="dark" round (click)="goHome()"><ion-icon name="home"></ion-icon></button>
   </ion-fab>
   <ion-fab bottom right>
-    <button ion-button class="fab-adoption" round (click)="goForward()"><ion-icon name="arrow-forward"></ion-icon></button>
+      <button ion-button class="fab-adoption" round (click)="goForward()"><ion-icon name="arrow-forward"></ion-icon></button>
   </ion-fab>
-</ion-content>

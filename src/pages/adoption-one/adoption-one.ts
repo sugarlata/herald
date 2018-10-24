@@ -1,16 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AdoptionTwoPage } from '../adoption-two/adoption-two';
-import { AdoptionAniOneComponent } from './../../components/adoption-ani-one/adoption-ani-one';
+import { AdoptionAnimatorComponent } from './../../components/adoption-animator/adoption-animator';
 
-
-/**
- * Generated class for the AdoptionOnePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -21,10 +14,17 @@ import { AdoptionAniOneComponent } from './../../components/adoption-ani-one/ado
 export class AdoptionOnePage {
   
   @ViewChild("gospelAni")
-  public gospelAni: AdoptionAniOneComponent;
+  public gospelAni: AdoptionAnimatorComponent;
+
+  @ViewChild("blinky")
+  private blinky: any;
+
+  stage: number;
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
+    this.stage = 0;
+
   }
 
   ionViewDidLoad() {
@@ -32,55 +32,43 @@ export class AdoptionOnePage {
   }
 
   ngAfterViewInit() {
-    this.gospelAni.createAnim();
-    this.gospelAni.setBase();
+    // this.gospelAni.createAnim();
+    // this.gospelAni.setBase();
     
   }
 
   goHome(params) {
-    this.gospelAni.hideAll();
+    // this.gospelAni.hideAll();
     this.navCtrl.setRoot(HomePage);
   }
 
   goForward(params){
-    this.gospelAni.hideAll();
+    // this.gospelAni.hideAll();
     this.navCtrl.push(AdoptionTwoPage, {params: params}, {animate: true, animation: "transition", duration: 300, direction: 'forward'});
   }
 
-  tabOneClick(params) {
-    this.gospelAni.hideScene12();
-    this.gospelAni.hideScene13();
-    this.gospelAni.showScene11();
+  onScroll(event) {
+    let sv = event['scrollTop'];
 
-  }
+    if (sv != 0) {
+      this.blinky.nativeElement.style.webkitAnimationPlayState = 'paused';
+      this.blinky.nativeElement.style.visibility = "hidden";
+    } else {
+      this.blinky.nativeElement.style.webkitAnimationPlayState = 'running';
+      this.blinky.nativeElement.style.visibility = "visible";
+    }
 
-  tabOneUnclicked(params) {
-    this.gospelAni.hideScene11();
-    
-  }
+    if (sv < 1415 && this.stage != 1) {
+      this.stage = 1;
+      this.gospelAni.loadScene11();
+    } else if (1415 <= sv && sv < 2200 && this.stage != 2) {
+      this.stage = 2;
+      this.gospelAni.loadScene12();
+    } else if (2200 <= sv && this.stage != 3) {
+      this.stage = 3;
+      this.gospelAni.loadScene13();
+    }
 
-  tabTwoClick(params) {
-    this.gospelAni.hideScene11();
-    this.gospelAni.hideScene13();
-
-    this.gospelAni.showScene12();
-  }
-
-  tabTwoUnclicked(params) {
-    this.gospelAni.hideScene12();
-    
-  }
-
-  tabThreeClick(params) {
-    this.gospelAni.hideScene11();
-    this.gospelAni.hideScene12();
-
-    this.gospelAni.showScene13();
-  }
-
-  tabThreeUnclicked(params) {
-    this.gospelAni.hideScene13();
-    
   }
   
 }

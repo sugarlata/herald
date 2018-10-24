@@ -18,11 +18,11 @@ import { KingdomFourPage } from './../pages/kingdom-four/kingdom-four';
 import { KingdomFivePage } from './../pages/kingdom-five/kingdom-five';
 
 import { GospelAnimatorComponent } from './../components/gospel-animator/gospel-animator';
-import { AdoptionAniOneComponent } from './../components/adoption-ani-one/adoption-ani-one';
 import { AdoptionAniTwoComponent } from './../components/adoption-ani-two/adoption-ani-two';
 import { AdoptionAniThreeComponent } from './../components/adoption-ani-three/adoption-ani-three';
 import { AdoptionAniFourComponent } from './../components/adoption-ani-four/adoption-ani-four';
 import { AdoptionAniFiveComponent } from './../components/adoption-ani-five/adoption-ani-five';
+import { AdoptionAnimatorComponent } from './../components/adoption-animator/adoption-animator';
 
 import { ParallaxHeaderDirective } from './../directives/parallax-header/parallax-header';
 
@@ -41,22 +41,22 @@ import { ParallaxHeaderDirective } from './../directives/parallax-header/paralla
     KingdomFourPage,
     KingdomFivePage,
     GospelAnimatorComponent,
-    AdoptionAniOneComponent,
     AdoptionAniTwoComponent,
     AdoptionAniThreeComponent,
     AdoptionAniFourComponent,
     AdoptionAniFiveComponent,
+    AdoptionAnimatorComponent,
     ParallaxHeaderDirective,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     GospelAnimatorComponent,
-    AdoptionAniOneComponent,
     AdoptionAniTwoComponent,
     AdoptionAniThreeComponent,
     AdoptionAniFourComponent,
     AdoptionAniFiveComponent,
+    AdoptionAnimatorComponent,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -72,12 +72,6 @@ import { ParallaxHeaderDirective } from './../directives/parallax-header/paralla
     KingdomThreePage,
     KingdomFourPage,
     KingdomFivePage,
-    GospelAnimatorComponent,
-    AdoptionAniOneComponent,
-    AdoptionAniTwoComponent,
-    AdoptionAniThreeComponent,
-    AdoptionAniFourComponent,
-    AdoptionAniFiveComponent,
   ],
   providers: [
     StatusBar,

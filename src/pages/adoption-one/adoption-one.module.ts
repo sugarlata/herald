@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AdoptionOnePage } from './adoption-one';
-import { AdoptionAniOneComponent } from '../../components/adoption-ani-one/adoption-ani-one'
+import { AdoptionAnimatorComponent } from '../../components/adoption-animator/adoption-animator'
 
 @NgModule({
   declarations: [
@@ -9,7 +9,7 @@ import { AdoptionAniOneComponent } from '../../components/adoption-ani-one/adopt
   ],
   imports: [
     IonicPageModule.forChild(AdoptionOnePage),
-    AdoptionAniOneComponent,
+    AdoptionAnimatorComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
